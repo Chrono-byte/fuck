@@ -1,0 +1,53 @@
+#!/bin/bash
+
+args=("$@")
+
+fuck_this()
+{
+    echo "Sure thing."
+    kill -9 $PPID
+    exit
+}
+
+fuck_you()
+{
+    echo "Oh, really?"
+    shutdown -h now
+}
+
+fuck_off()
+{
+    fuck_you
+}
+
+fuck_me()
+{
+    echo "I am incapable of such a task. However, I have opened a new window for you that may be helpful. Good luck."
+    if which xdg-open > /dev/null
+    then
+        xdg-open tinder.com
+    elif which gnome-open > /dev/null
+    then
+        gnome-open tinder.com
+    fi
+    exit
+}
+
+case ${args[0]} in
+this)
+    fuck_this
+    ;;
+you)
+    fuck_you
+    ;;
+off)
+    fuck_off
+    ;;
+me)
+    fuck_me
+    ;;
+*)
+    echo "I know how you feel."
+    exit
+    ;;
+esac
