@@ -15,11 +15,6 @@ fuck_you()
     shutdown -h now
 }
 
-fuck_off()
-{
-    fuck_you
-}
-
 fuck_me()
 {
     echo "I am incapable of such a task. However, I have opened a new window for you that may be helpful. Good luck."
@@ -37,11 +32,8 @@ case ${args[0]} in
 this)
     fuck_this
     ;;
-you)
+you | off)
     fuck_you
-    ;;
-off)
-    fuck_off
     ;;
 me)
     fuck_me
