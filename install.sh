@@ -55,8 +55,4 @@ if [ $1 ]; then
     fuckWithoutUpdate
 else 
     fuckWithUpdate
-<<<<<<< refs/remotes/Chronomly/master
 fi
-=======
-fi
->>>>>>> add skip update option and colors
